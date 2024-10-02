@@ -1,4 +1,4 @@
-import { Route, Routes, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Home from './components/home';
 import About from './components/about';
@@ -30,4 +30,12 @@ function App() {
   );
 }
 
-export default App;
+function Wrapper() {
+  return (
+    <Router basename="/Portfolio">
+      <App />
+    </Router>
+  );
+}
+
+export default Wrapper;
