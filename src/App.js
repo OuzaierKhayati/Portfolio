@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+import { Route, Routes, Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Home from './components/home';
 import About from './components/about';
@@ -17,25 +17,17 @@ function App() {
         <nav className="navbar">
           <h1 key={`h1-${key}`}>My Projects</h1> {/* Add a key to the h1 */}
           <ul key={`ul-${key}`}>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
+            <li><Link to="/Portfolio">Home</Link></li>
+            <li><Link to="/Portfolio/about">About</Link></li>
           </ul>
         </nav>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/Portfolio" element={<Home />} />
+          <Route path="/Portfolio/about" element={<About />} />
         </Routes>
       </header>
 
   );
 }
 
-function Wrapper() {
-  return (
-    <Router basename="/Portfolio">
-      <App />
-    </Router>
-  );
-}
-
-export default Wrapper;
+export default App;
