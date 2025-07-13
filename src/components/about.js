@@ -34,9 +34,9 @@ class Profile extends React.Component {
                     style={{width: this.state.imgSize, height: this.state.imgSize}}
                     alt="laptop_icon"/>
                 <div className="skills-container">
-                    <SkillBar skills = 'React, NodeJS, SQL' />
-                    <SkillBar skills = 'C/C++/JavaScript/TypeScript/Java/Python' />
-                    <SkillBar skills = 'UML' />
+                    <SkillBar skills = 'React, NodeJS, Angular, Spring, SQL' />
+                    <SkillBar skills = 'C / C++ / Java / JavaScript / TypeScript' />
+                    <SkillBar skills = 'Agile Scrum' />
                 </div>
             </div>
         );
